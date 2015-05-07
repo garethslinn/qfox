@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<!-- Mirrored from www.gslinn.com/qfox/core.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 May 2015 21:43:17 GMT -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qfox - core</title>
+    <style>.test {
+        background:red;
+    }</style>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/skin.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/qfox.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <div class="masthead">
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li class="active"><a href="core.html">Core</a></li>
+                        <!--
+                            <li><a href="widget.html">Widgets</a></li>
+                            <li><a href="browser.html">Browser</a></li>
+                        -->
+                        <li><a href="js/qfox.js">Download</a></li>
+                     </ul>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div><!-- /.navbar -->
+    </div>
+    <h1 class="muted">Qfox</h1>
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <h2><img src="img/qfox_javascript_library.png" /></h2>
+        <p class="lead">Core methods are documented here. The documentation in its present form will be kept brief until more of the project is completed.</p>
+    </div>
+
+    <hr>
+
+    <!-- Example row of columns -->
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>Initiating a collection</h2>
+            <p>It's easy to create a dom collection, just state the query wrapped in Qfox syntax.</p>
+            <pre>qf('li');</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.id()</h2>
+            <p>Use to retrieve an element with a matching id.</p>
+            <pre>qf.id('myId');</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.tagName()</h2>
+            <p>Use to retrieve a collection of matching tags.</p>
+            <pre>qf.tagName('p');</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>qf.className()</h2>
+            <p>Use to retrieve a collection of matching class names.</p>
+            <pre>qf.className('myClass');</pre>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.ready()</h2>
+            <p>This fuction is used to execute Qfox once the dom has loaded.</p>
+            <pre>
+qf.ready(function () {
+    alert('Dom loaded');
+});
+            </pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.css()</h2>
+            <p>Sets style rules to a collection.</p>
+            <pre>qf('li').css('background:red');</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+    <div class="span12">
+        <h2>.bind()</h2>
+        <p>Use bind to bind an event, this example shows how to set a click event.</p>
+            <pre>
+qf('input.button').bind('click', function (e) {
+    alert('button clicked')
+});</pre>
+    </div>
+</div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.unbind()</h2>
+            <p>Use unbind to unbind an event, this example shows how to unbind a click event.</p>
+            <pre>
+qf('input.button').unbind('click', function (e) {
+    alert('button clicked')
+});</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.hide()</h2>
+            <p>Hides a collection.</p>
+            <pre>qf('li').hide();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.show()</h2>
+            <p>Display a hidden collection.</p>
+            <pre>qf('li').show();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.remove()</h2>
+            <p>Remove child element.</p>
+            <pre>qf('ul').remove('li');</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.even()</h2>
+            <p>Select only even matched elements from the collection.</p>
+            <pre>qf('li').even();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.odd()</h2>
+            <p>Select only odd matched elements from the collection.</p>
+            <pre>qf('li').odd();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.only()</h2>
+            <p>Select only the stated element.  In this example only the first list element is obtained.  The first element
+            always starts at zero.</p>
+            <pre>qf('li').only(0);</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.allBut()</h2>
+            <p>Select all but the stated element.  In this example all elements are selected butthe  first list element.  The first element
+                always starts at zero.</p>
+            <pre>qf('li').allBut(0);</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.whatTagName()</h2>
+            <p>Returns the name of the element. In this example the anchor class is set to an anchor tag and will return 'a'. </p>
+            <pre>qf('li .anchor').whatTagName();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.prev()</h2>
+            <p>Returns previous node</p>
+            <pre>qf('li').prev();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.next()</h2>
+            <p>Gets next node</p>
+            <pre>qf('li').next();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.first()</h2>
+            <p>Gets first element.</p>
+            <pre>qf('li').first();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.last()</h2>
+            <p>Gets last element</p>
+            <pre>qf('li').last();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.parent()</h2>
+            <p>Returns parent element.</p>
+            <pre>qf('li').parent();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.hasClass()</h2>
+            <p>Returns the first element className.</p>
+            <pre>qf('li').hasClass('myClass');</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.hasAttr()</h2>
+            <p>Returns the first element attribute.</p>
+            <pre>qf('li').hasAttr('title');</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.addAttr()</h2>
+            <p>Add one or more attributes to all elements</p>
+            <pre>qf('li').addAttr('title','My Title');</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.removeAttr()</h2>
+            <p>Remove one or more attributes from all elements</p>
+            <pre>qf('li').removeAttr('title');</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.addClass()</h2>
+            <p>Add one or more class names to one or all elements.</p>
+            <pre>qf('li').addClass('className');</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.removeClass()</h2>
+            <p>Remove one or more class names from one or all elements.</p>
+            <pre>qf('li').removeClass();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.width()</h2>
+            <p>Return the width of an element.</p>
+            <pre>qf('li').width();</pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.height()</h2>
+            <p>Return the height of an element.</p>
+            <pre>qf('li').height();</pre>
+        </div>
+    </div>
+    <hr />
+<div class="row-fluid">
+    <div class="span12">
+        <h2>.animate()</h2>
+        <p>Move an element in a horizontal direction both left and right.  Parameters: 'direction',distance,speed. distance is set to pixels and speed is
+        calculated at 1 second per 1000 milliseconds.</p>
+        <pre>qf('#pointer').animate('right',100,1);</pre>
+    </div>
+</div>
+<hr />
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.ajaxConnect()</h2>
+            <p>Ajax function used to retrieve and send data to and from the server.</p>
+            <p>Methods: Get/Post</p>
+            <pre>
+qf.ajaxConnect('get','data/times.php');
+qf.ajaxConnect('get','data/update.php');
+            </pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.prohibitDefault()</h2>
+            <p>The default action of an event will not be triggered.</p>
+            <pre>
+qf('input.button').bind('click', function (e) {
+    qf.prohibitDefault(e);
+    alert('button clicked')
+});
+            </pre>
+        </div>
+    </div>
+    <hr />
+    <div class="row-fluid">
+        <div class="span12">
+            <h2>.prohibitPropagation()</h2>
+            <p>Prohibits an event from bubbling up the DOM tree and also stops any parent handlers from being notified of the event.</p>
+            <pre>
+qf('input.button').bind('click', function (e) {
+    qf.prohibitPropagation(e);
+    alert('button clicked')
+});
+            </pre>
+        </div>
+    </div>
+    <hr />
+
+    <div class="footer">
+        <p>&copy; Qfox 2013</p>
+    </div>
+
+</div> <!-- /container -->
+</body>
+
+
+<!-- Mirrored from www.gslinn.com/qfox/core.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 May 2015 21:43:17 GMT -->
+</html>
